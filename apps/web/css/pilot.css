@@ -1,0 +1,5 @@
+.demo-banner{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:9px 16px;background:#fff3c4;color:#5d4300;border-bottom:1px solid #e0bc4f;font-size:.74rem;letter-spacing:.02em}
+.demo-banner strong{font-size:.68rem;letter-spacing:.1em}
+button:disabled{cursor:not-allowed;opacity:.58}
+.story-image[role="img"]{min-height:135px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.bottom-nav a{transition:none!important}}

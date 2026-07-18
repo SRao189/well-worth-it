@@ -19,7 +19,21 @@ The implementation target is a mobile-first, accessible single-page experience:
 - Main Game: hold-to-fill water-project progress.
 - Village: deterministic building unlocks and impact stats.
 - Stories: bundled, source-traceable project stories.
-- Leaderboard: local personal bests only for the MVP.
+- Leaderboard: local personal bests in the web pilot, with Supabase-shaped
+  server validation and synthetic campus fixtures prepared for the stakeholder
+  build.
+
+## Repository shape
+
+- `apps/web` — dependency-free shareable browser demo.
+- `apps/mobile` — Expo Router shell for iOS and Android.
+- `packages/game-core` — deterministic phase, quest, reward, and unlock rules.
+- `packages/content-schema` — provenance-aware story metadata validation.
+- `supabase` — RLS migration and server-side score submission function.
+- `docs` — product boundary and accessibility notes.
+
+Run the deterministic checks with `npm test`. The mobile app requires an Expo
+development environment and intentionally has no embedded provider secrets.
 
 This repository is an experiment and is not affiliated with or endorsed by charity: water.
 
