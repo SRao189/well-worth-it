@@ -40,18 +40,21 @@
     </header>
     <main>
       <section class="screen is-active" id="main-game" data-screen="main-game" aria-labelledby="main-title">
-        <div class="screen-heading"><div><p class="eyebrow">Phase 1 of 5</p><h1 id="main-title">Mountain Spring</h1></div><span class="level-badge">LV12</span></div>
-        <div class="progress-track" role="progressbar" aria-label="Phase progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><span style="width:40%"></span></div>
+        <div class="game-topline"><div><p class="eyebrow" id="phaseEyebrow">PHASE 1 · AWARENESS</p><h1 id="main-title">Mountain Spring</h1></div><div class="session-score"><span>RUN SCORE</span><strong id="runScore">1,247</strong></div></div>
+        <div class="mission-strip"><span class="mission-icon" aria-hidden="true">◈</span><div><strong id="missionTitle">Clear the sediment</strong><span id="missionCopy">Route the water to the village pump.</span></div><b id="phaseReward">+200</b></div>
+        <div class="phase-track" role="progressbar" aria-label="Waterworks phases" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1"><span class="phase-dot active">1</span><i></i><span class="phase-dot">2</span><i></i><span class="phase-dot">3</span><i></i><span class="phase-dot">4</span><i></i><span class="phase-dot">5</span></div>
         <div class="game-card" data-mechanic="pipe-routing">
-          <div class="clouds" aria-hidden="true">☁︎　☁︎</div>
-          <div class="spring-art" aria-hidden="true"><div class="mountain"></div><div class="spring-water"></div></div>
-          <p class="muted">Route clean water through the pipe · clear sediment</p>
-          <button type="button" class="fill-target" id="fillTarget" aria-describedby="fillHint" aria-label="Hold to fill the spring"><span class="target-icon" aria-hidden="true">◉</span><span id="fillLabel" aria-live="polite">Hold to fill</span></button>
-          <div class="fill-meter"><span id="fillMeter"></span></div>
-          <p id="fillHint" class="hint">500–1,500 ms phase-dependent fill · keyboard accessible</p>
+          <div class="game-card-head"><span class="badge badge-live">LIVE RUN</span><span class="combo-note" id="comboNote">No mistakes · clean route</span></div>
+          <div class="world-art" aria-hidden="true"><div class="sun"></div><div class="ridge ridge-back"></div><div class="ridge ridge-front"></div><div class="pump"><span></span></div><div class="water-stream"></div></div>
+          <div class="board-heading"><div><span class="eyebrow">THE ROUTE</span><strong>Connect every segment</strong></div><span class="step-count" id="stepCount">0 / 6</span></div>
+          <div class="pipe-board" id="pipeBoard" aria-label="Pipe route puzzle"></div>
+          <p class="board-status" id="boardStatus" role="status">Select the glowing segment first.</p>
+          <div class="flow-action"><button type="button" class="fill-target" id="fillTarget" aria-describedby="fillHint" aria-label="Hold to open the water flow"><span class="target-icon" aria-hidden="true">➜</span><span id="fillLabel">Hold to flow</span></button><label class="assist-toggle"><input type="checkbox" id="assistMode"> Assisted route</label></div>
+          <div class="fill-meter" aria-hidden="true"><span id="fillMeter"></span></div>
+          <p id="fillHint" class="hint">Hold for one second after the route is complete · keyboard accessible</p>
         </div>
-        <div class="quest-banner"><span>Daily quest</span><strong>Clear sediment</strong><b id="questCount">0 / 5</b><span class="reward">+200 droplets</span></div>
-        <div class="hud" aria-live="polite"><div><small>Droplets</small><strong id="droplets">1,247</strong></div><div><small>Pipe inventory</small><strong>12</strong></div><div><small>Lives changed</small><strong>147</strong></div></div>
+        <div class="quest-banner"><span>DAILY QUEST</span><strong>Complete clean routes</strong><b id="questCount">0 / 5</b><span class="reward">+200 droplets · resets at local midnight</span></div>
+        <div class="hud" aria-live="polite"><div><small>Droplets</small><strong id="droplets">1,247</strong><span class="stat-trend">+0 this run</span></div><div><small>Route streak</small><strong id="routeStreak">0</strong><span class="stat-trend">build your combo</span></div><div><small>Village unlock</small><strong id="nextUnlock">500</strong><span class="stat-trend">droplets to School</span></div></div>
       </section>
       <section class="screen" id="village" data-screen="village" aria-labelledby="village-title">
         <div class="screen-heading"><div><p class="eyebrow">Your project</p><h1 id="village-title">My Village</h1></div><span class="concept-pill">Concept data</span></div>
@@ -73,7 +76,7 @@
         <div class="rank-card"><strong>Personal best</strong><span>Cross-campus ranking requires a verified backend.</span><ol><li><b>@waterwarrior</b><strong>12,400</strong></li><li><b>@tapmaster</b><strong>9,850</strong></li><li class="you"><b>YOU</b><strong>7,200</strong></li><li><b>@hydrate</b><strong>6,100</strong></li></ol><button id="claimReward">Claim weekly reward · 500 droplets</button></div>
       </section>
     </main>
-    <nav class="bottom-nav" aria-label="Primary navigation"><a class="active" aria-current="page" href="#main-game">⌂<span>Village</span></a><a href="#stories">◌<span>Stories</span></a><a href="#leaderboard">♛<span>Leaderboard</span></a></nav>
+    <nav class="bottom-nav" aria-label="Primary navigation"><a class="active" aria-current="page" href="#main-game">◒<span>Game</span></a><a href="#village">⌂<span>Village</span></a><a href="#stories">◌<span>Stories</span></a><a href="#leaderboard">♛<span>Leaderboard</span></a></nav>
   </div>
   <script src="js/assignment-gate.js"></script><script src="js/main-game.js"></script><script src="js/village.js"></script><script src="js/stories.js"></script><script src="js/leaderboard.js"></script>
 </body>
