@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFC107">
+  <title>Well Worth It — concept demo</title>
+  <link rel="stylesheet" href="css/main-game.css">
+  <link rel="stylesheet" href="css/village.css">
+  <link rel="stylesheet" href="css/stories.css">
+  <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button" aria-label="Open menu">☰</button>
+      <a class="brand" href="#main-game">Well <span>Worth</span> It</a>
+      <div class="top-actions"><span aria-label="Lives">♥ <b id="lives">3</b></span><button class="icon-button" aria-label="Settings">⚙</button></div>
+    </header>
+    <main>
+      <section class="screen is-active" id="main-game" data-screen="main-game" aria-labelledby="main-title">
+        <div class="screen-heading"><div><p class="eyebrow">Phase 1 of 5</p><h1 id="main-title">Mountain Spring</h1></div><span class="level-badge">LV12</span></div>
+        <div class="progress-track" role="progressbar" aria-label="Phase progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><span style="width:40%"></span></div>
+        <div class="game-card">
+          <div class="clouds" aria-hidden="true">☁︎　☁︎</div>
+          <div class="spring-art" aria-hidden="true"><div class="mountain"></div><div class="spring-water"></div></div>
+          <p class="muted">Hold to clear sediment</p>
+          <button class="fill-target" id="fillTarget" aria-describedby="fillHint"><span class="target-icon">◉</span><span id="fillLabel">Hold to fill</span></button>
+          <div class="fill-meter"><span id="fillMeter"></span></div>
+          <p id="fillHint" class="hint">500–1,500 ms phase-dependent fill · keyboard accessible</p>
+        </div>
+        <div class="quest-banner"><span>Daily quest</span><strong>Clear sediment</strong><b id="questCount">0 / 5</b><span class="reward">+200 droplets</span></div>
+        <div class="hud" aria-live="polite"><div><small>Droplets</small><strong id="droplets">1,247</strong></div><div><small>Pipe inventory</small><strong>12</strong></div><div><small>Lives changed</small><strong>147</strong></div></div>
+      </section>
+      <section class="screen" id="village" data-screen="village" aria-labelledby="village-title">
+        <div class="screen-heading"><div><p class="eyebrow">Your project</p><h1 id="village-title">My Village</h1></div><span class="concept-pill">Concept data</span></div>
+        <div class="building-grid">
+          <article class="building-card"><span class="building-icon">⌂</span><h2>Community Center</h2><p>Level 3 ★★★</p><button>Collect 450</button></article>
+          <article class="building-card"><span class="building-icon">▥</span><h2>School</h2><p>Level 1 ★</p><button>Collect 120</button></article>
+          <article class="building-card"><span class="building-icon">✚</span><h2>Health Clinic</h2><p>Level 2 ★★</p><button>Collect 300</button></article>
+          <article class="building-card"><span class="building-icon">⌁</span><h2>Farm</h2><p>Level 4 ★★★★</p><button>Collect 800</button></article>
+        </div>
+        <div class="impact-card"><strong>Total droplets: 2,847</strong><span>147 lives changed <em>• concept metric</em></span><p>Demo location: 9.1450°N, 40.4897°E — real project attribution requires licensing and verification.</p><div class="action-row"><button>Proof pending</button><button>Redeem perk</button><button>Share</button></div></div>
+      </section>
+      <section class="screen" id="stories" data-screen="stories" aria-labelledby="stories-title">
+        <div class="screen-heading"><div><p class="eyebrow">Impact feed</p><h1 id="stories-title">Stories</h1></div><span class="concept-pill">Demo stories</span></div>
+        <article class="story-card"><div class="story-image">Photo placeholder<br><small>licensed image required</small></div><div><blockquote>“Before this well, I walked 4 hours for water.”</blockquote><p>— Aster, 28, Tigray, Ethiopia</p><small>13.496°N, 39.466°E · attribution pending</small><div class="action-row"><button>Read full story</button><button>Donate $5</button></div></div></article>
+        <article class="story-card"><div class="story-image blue">Water story<br><small>licensed image required</small></div><div><blockquote>“Clean water means my students stay in school.”</blockquote><p>— Teacher story, Malawi</p><small>15.388°S, 35.332°E · attribution pending</small><div class="action-row"><button>Read full story</button><button>Donate $5</button></div></div></article>
+      </section>
+      <section class="screen" id="leaderboard" data-screen="leaderboard" aria-labelledby="leaderboard-title">
+        <div class="screen-heading"><div><p class="eyebrow">Personal bests · MVP</p><h1 id="leaderboard-title">Leaderboard</h1></div><span class="concept-pill">Local only</span></div>
+        <div class="rank-card"><strong>Personal best</strong><span>Cross-campus ranking requires a verified backend.</span><ol><li><b>@waterwarrior</b><strong>12,400</strong></li><li><b>@tapmaster</b><strong>9,850</strong></li><li class="you"><b>YOU</b><strong>7,200</strong></li><li><b>@hydrate</b><strong>6,100</strong></li></ol><button id="claimReward">Claim weekly reward · 500 droplets</button></div>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Primary navigation"><a class="active" href="#main-game">⌂<span>Village</span></a><a href="#stories">◌<span>Stories</span></a><a href="#leaderboard">♛<span>Leaderboard</span></a></nav>
+  </div>
+  <script src="js/main-game.js"></script><script src="js/village.js"></script><script src="js/stories.js"></script><script src="js/leaderboard.js"></script>
+</body>
+</html>

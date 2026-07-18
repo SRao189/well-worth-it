@@ -1,0 +1,1 @@
+document.querySelectorAll('.story-card button').forEach(button=>button.addEventListener('click',()=>{button.textContent=button.textContent.includes('Donate')?'Donation flow pending approval':'Story source pending licensing'}));
