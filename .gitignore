@@ -1,0 +1,8 @@
+.build-log/
+.build-state.json
+*.log
+~$*
+assignment-assets/
+capture-assignment-screens.js
+Well-Worth-It-Council-Review.docx
+Well-Worth-It-Game-Concept-Submission.docx

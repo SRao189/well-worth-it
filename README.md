@@ -1,6 +1,18 @@
 # Well Worth It
 
-Local pilot repository for the charity: water-inspired college game concept.
+## Global Career Accelerator assignment
+
+This repository contains Sahar Rao’s student concept and working prototype for
+the Global Career Accelerator “charity: water Game Concept” assignment. It is a
+design-and-frontend exercise demonstrating game concept development, digital
+wireframing, interaction logic, responsive layouts, accessibility thinking, and
+AI-assisted ideation.
+
+It is not an official charity: water product, fundraising page, impact tracker,
+or endorsement. The app displays an explicit assignment disclaimer before the
+experience opens. Stories, locations, photos, metrics, rewards, and project
+references are sample content only. No donation is accepted, and leaderboard
+data stays on the local device.
 
 The implementation target is a mobile-first, accessible single-page experience:
 
@@ -10,3 +22,31 @@ The implementation target is a mobile-first, accessible single-page experience:
 - Leaderboard: local personal bests only for the MVP.
 
 This repository is an experiment and is not affiliated with or endorsed by charity: water.
+
+## Local pilot boundary
+
+This build is suitable for a controlled demo or usability pilot on localhost.
+It intentionally does not provide real donations, real project attribution,
+account registration, a shared leaderboard, or a backend. All story, location,
+photo, and impact content is sample content pending source and licensing review.
+
+Run it with:
+
+```powershell
+python -m http.server 4175
+Start-Process http://127.0.0.1:4175/index.html
+```
+
+Before an external pilot, replace sample content with approved sources, add a
+privacy/consent flow if collecting data, and implement server-side identity,
+validation, rate limits, anti-cheat controls, monitoring, and a reviewed
+donation provider. Do not enable those integrations by placing secrets in this
+repository or in browser JavaScript.
+
+## Council provider diagnostics
+
+`council-deep.py --dry-run` reads Anthropic, OpenAI, and Gemini keys from the
+DPAPI-protected store and reads `PERPLEXITY_API_KEY` from the environment. A
+Perplexity HTTP 401 means that credential must be replaced in the selected
+credential manager; the adapter records the provider failure and continues with
+the remaining council members.
