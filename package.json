@@ -1,0 +1,11 @@
+{
+  "name": "well-worth-it",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "test:core": "node packages/game-core/test/game-core.test.js",
+    "test": "npm run test:core",
+    "web": "python -m http.server 4175 -d apps/web"
+  }
+}

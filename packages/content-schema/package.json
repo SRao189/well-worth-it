@@ -1,0 +1,6 @@
+{
+  "name": "@well-worth-it/content-schema",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.js"
+}
